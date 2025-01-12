@@ -6,6 +6,7 @@ const cors = require('cors');
 
 const userRoutes = require('./routes/userRoutes');
 const blogRoutes = require('./routes/blogRoutes');
+const schoolRoutes = require("./routes/schoolRoutes");
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use('/api/users', userRoutes);
 app.use('/api/blogs', blogRoutes);
+app.use('/api/school', schoolRoutes);
 
 const PORT = process.env.PORT || 8080;
 mongoose
