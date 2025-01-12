@@ -54,18 +54,18 @@ exports.uploadSchoolsData = (req, res) => {
 
     const schoolData = processExcelFile(filePath);
 
-   // res.send({data:schoolData});
+    res.send({data:schoolData});
 
     // Insert into MongoDB
-    DynamicSchoolModel.insertMany(schoolData)
-      .then(() => {
-        res.status(200).json({ message: "Data inserted into MongoDB" });
-      })
-      .catch((err) => {
-        res.status(500).json({
-          message: "Could not insert data into MongoDB",
-          error: err,
-        });
-      });
+    // DynamicSchoolModel.insertMany(schoolData)
+    //   .then(() => {
+    //     res.status(200).json({ message: "Data inserted into MongoDB" });
+    //   })
+    //   .catch((err) => {
+    //     res.status(500).json({
+    //       message: "Could not insert data into MongoDB",
+    //       error: err,
+    //     });
+    //   });
   });
 };
