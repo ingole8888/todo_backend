@@ -54,7 +54,7 @@ exports.uploadSchoolsData = (req, res) => {
 
     const schoolData = processExcelFile(filePath);
 
-    res.send({data:schoolData});
+    res.send({message: "School data to upload in Database!", data:schoolData});
 
     // Insert into MongoDB
     // DynamicSchoolModel.insertMany(schoolData)
