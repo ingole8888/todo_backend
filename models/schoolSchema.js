@@ -145,6 +145,14 @@ const schoolSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    finalSlug: {
+      type: String,
+      required: false,
+    },
+    oldSlug: {
+      type: String,
+      required: false,
+    },
   },
   { timestamps: true }
 );
