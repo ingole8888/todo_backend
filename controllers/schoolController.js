@@ -133,7 +133,7 @@ exports.staticSchoolData = async (req, res) => {
 };
 
 exports.findsStaticSchoolAndUpdateOrCreate = async (req, res) => {
-  // return "Remove return statement";
+   return "Remove return statement";
   try {
     const schoolWorkbook = xlsx.readFile("Static-Schools-Data-2024-v0.xlsx");
     const schoolWorksheet = schoolWorkbook.Sheets[schoolWorkbook.SheetNames[4]];
